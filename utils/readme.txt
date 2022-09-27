@@ -1,0 +1,5 @@
+callbacks文件是绘制loss曲线脚本
+dataloader文件是数据加载脚本
+utils文件是对输入图片进行处理，获得类，学习率，初始化权重脚本
+utils_fit文件是计算训练损失和验证损失并将训练权重保存脚本
+utils_metrics文件是计算模型在测试集的各个指标

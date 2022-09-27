@@ -1,0 +1,371 @@
+﻿<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/echarts.min.js"></script> 
+  <script type="text/javascript" src="js/js.js"></script> 
+  <script type="text/javascript" src="js/jquery.limarquee.js"></script> 
+  <script type="text/javascript" src="js/jquery.cxselect.min.js"></script> 
+    
+  <link rel="stylesheet" href="css/comon0.css">
+  
+  
+</head>
+<body>
+<div   style="background:#000d4a url(images/bg.jpg) center top;">
+	<div class="loading">
+  <div class="loadbox"> <img src="picture/loading.gif"> 页面加载中... </div>
+</div>
+	<div class="back"></div>
+<div class="head">
+	 <div class="weather"><span id="showTime"></span></div>
+  <h1 style="color: white">恶意程序检测平台</h1>
+
+</div>
+	<script>
+var t = null;
+    t = setTimeout(time,1000);//開始运行
+    function time()
+    {
+       clearTimeout(t);//清除定时器
+       dt = new Date();
+		var y=dt.getFullYear();
+		var mt=dt.getMonth()+1;
+		var day=dt.getDate();
+       var h=dt.getHours();//获取时
+       var m=dt.getMinutes();//获取分
+       var s=dt.getSeconds();//获取秒
+       document.getElementById("showTime").innerHTML = y+"年"+mt+"月"+day+"日"+h+"时"+m+"分"+s+"秒";
+       t = setTimeout(time,1000); //设定定时器，循环运行     
+    } 
+
+</script>
+<div class="mainbox">
+  <ul class="clearfix">
+    <li>
+      <div class="boxall" style="height:400px;">
+        <div class="alltitle">常见的十大类恶意程序危害程度</div>
+         <div class="navboxall" id="echart5"></div>
+      </div>
+      <div class="boxall" style="height:260px;">
+        <div class="alltitle">近两年发生的恶意程序攻击事件</div>
+       <div class="navboxall" >
+		  <div class="wraptit">
+		   <!-- <span>事件</span> -->
+		   </div>
+		  <div class="wrap">
+          <ul>
+<li><p><span>IT服务商Inetum遭Blackcat勒索软件攻击</span></p></li>
+<li><p><span>新加坡电信巨头近13万客户信息遭泄露</span>
+<li><p><span>加拿大无线通信设备制造商SW遭勒索攻击</span>
+<li><p><span>欧洲能源巨头EDP遭勒索近1000万欧元</span>
+<li><p><span>Facebook5.33亿用户数据被发布</span>
+<li><p><span>伊朗核设施遭遇网络攻击</span>
+<li><p><span>美国最大成品油管道运营商遭勒索软件攻击</span>
+<li><p><span>美国核武器承包商SO遭REvil勒索软件攻击</span>
+<li><p><span>南非司法部网络系统遭到黑客攻击陷入瘫痪</span>
+<li><p><span>加拿大多省医疗卫生系统因网络攻击而中断</span>
+<li><p><span>战网遭受DDoS攻击 暴雪表示服务已恢复正常</span>
+
+           
+          </ul>
+        </div>
+		  
+		  </div>
+      </div>
+      <div class="boxall" style="height:260px;">
+        <div class="alltitle">平台检测出最多的五种类型</div>
+        
+       <div class="navboxall" id="echart1"></div>
+      </div>
+    </li>
+    <li>
+      
+    <div class="boxall" style="height:230px">
+		<div class="clearfix navboxall" style="height: 100%">
+		<div class="pulll_left num">
+			<div class="numbt">总体监测数量<span> </span></div>
+			<div class="numtxt">2721 个 </div>
+			</div>
+		<div class="pulll_right zhibiao">
+			<div class="zb1"><span>Worm</span><div id="zb1"></div></div>
+			<div class="zb2"><span>PWS</span><div id="zb2"></div></div>
+			<div class="zb3"><span>TDownloader</span><div id="zb3"></div></div>
+      <div class="numbt"> <span>（ 三大类中恶意程序检测量及占比情况 ）</span></div>
+		</div>
+		</div>
+      </div>
+		   <div class="boxall" style="height:350px">
+        <div class="alltitle">恶意攻击事件数量及损失金额统计（2021.10-2022.3）</div>
+			   <div class="navboxall" id="echart4"></div>
+			   
+      </div>
+		   <div class="boxall" style="height:340px">
+        <div class="alltitle">平台使用情况</div>
+			   <div class="navboxall" id="echart3"></div>
+      </div>
+    </li>
+    <li>
+      <div class="boxall" style="height:950px">
+        <div class="alltitle">25类恶意程序(基于灰度图像)</div>
+	<div class="navboxall">
+		  <table class="table1" width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <th scope="col">序号</th>
+      <th scope="col">名称</th>
+      <!-- <th scope="col">数量</th> -->
+      <th scope="col">所属类别</th>
+    </tr>
+    <tr>
+		<td><span>1</span></td>
+      <td>Allaple.L</td>
+      <!-- <td>114万<br></td> -->
+      <td>Worm<br></td>
+    </tr>
+    <tr>
+		<td><span>2</span></td>
+      <td>Allaple.A</td>
+      <!-- <td>923823万</td> -->
+      <td>Worm</td>
+    </tr>
+    
+    <tr>
+		<td><span>3</span></td>
+      <td>Yuner.A</td>
+      <!-- <td>1240253万</td> -->
+      <td>Worm</td>
+    </tr>
+    <tr>
+		<td><span>4</span></td>
+      <td>Lolyda.AA 1</td>
+      <!-- <td>1.2亿</td> -->
+      <td>PWS</td>
+    </tr>
+	  <tr>
+		  <td><span>5</span></td>
+      <td>Lolyda.AA 2</td>
+      <!-- <td>13423万</td> -->
+      <td>PWS</td>
+    </tr>
+    <tr>
+		  <td><span>6</span></td>
+      <td>Lolyda.AA 3</td>
+      <!-- <td>13423万</td> -->
+      <td>PWS</td>
+    </tr>
+    <tr>
+		  <td><span>7</span></td>
+      <td>C2Lop.P</td>
+      <!-- <td>13423万</td> -->
+      <td>Trojan</td>
+    </tr>
+    <tr>
+		  <td><span>8</span></td>
+      <td>C2Lop.gen!G</td>
+      <!-- <td>13423万</td> -->
+      <td>Trojan</td>
+    </tr>
+    <tr>
+		  <td><span>9</span></td>
+      <td>Instant access</td>
+      <!-- <td>13423万</td> -->
+      <td>Dialer</td>
+    </tr>
+    <tr>
+		  <td><span>10</span></td>
+      <td>Swizzor.gen!I</td>
+      <!-- <td>13423万</td> -->
+      <td>TDownloader</td>
+    </tr>
+    <tr>
+		  <td><span>11</span></td>
+      <td>Swizzor.gen!E</td>
+      <!-- <td>13423万</td> -->
+      <td>TDownloader</td>
+    </tr>
+    <tr>
+		  <td><span>12</span></td>
+      <td>VB.AT</td>
+      <!-- <td>13423万</td> -->
+      <td>Worm</td>
+    </tr>
+    <tr>
+		  <td><span>13</span></td>
+      <td>Fakerean</td>
+      <!-- <td>13423万</td> -->
+      <td>Rogue</td>
+    </tr>
+    <tr>
+		  <td><span>14</span></td>
+      <td>Alueron.gen!J</td>
+      <!-- <td>13423万</td> -->
+      <td>Trojan</td>
+    </tr>
+    <tr>
+		  <td><span>15</span></td>
+      <td>Malex.gen!J</td>
+      <!-- <td>13423万</td> -->
+      <td>Trojan</td>
+    </tr>
+    <tr>
+		  <td><span>16</span></td>
+      <td>Lolyda.AT</td>
+      <!-- <td>13423万</td> -->
+      <td>PWS</td>
+    </tr>
+    <tr>
+		  <td><span>17</span></td>
+      <td>Adialer.C</td>
+      <!-- <td>13423万</td> -->
+      <td>Dialer</td>
+    </tr>
+    <tr>
+		  <td><span>18</span></td>
+      <td>Wintrim.BX</td>
+      <!-- <td>13423万</td> -->
+      <td>TDownloader</td>
+    </tr>
+    <tr>
+		  <td><span>19</span></td>
+      <td>Dialplatform.B</td>
+      <!-- <td>13423万</td> -->
+      <td>Dialer</td>
+    </tr>
+    <tr>
+		  <td><span>20</span></td>
+      <td>Dontovo.A</td>
+      <!-- <td>13423万</td> -->
+      <td>TDownloader</td>
+    </tr>
+    <tr>
+		  <td><span>21</span></td>
+      <td>Obfuscator.AD</td>
+      <!-- <td>13423万</td> -->
+      <td>TDownloader</td>
+    </tr>
+    <tr>
+		  <td><span>22</span></td>
+      <td>Agent.FYI</td>
+      <!-- <td>13423万</td> -->
+      <td>Backdoor</td>
+    </tr>
+    <tr>
+		  <td><span>23</span></td>
+      <td>Autorun.K</td>
+      <!-- <td>13423万</td> -->
+      <td>Worm:AutoIT</td>
+    </tr>
+    <tr>
+		  <td><span>24</span></td>
+      <td>Rbot!gen</td>
+      <!-- <td>13423万</td> -->
+      <td>Backdoor</td>
+    </tr>
+    <tr>
+		  <td><span>25</span></td>
+      <td>Skintrim.N</td>
+      <!-- <td>13423万</td> -->
+      <td>Trojan</td>
+    </tr>
+
+  </tbody>
+</table>
+		  </div>
+      </div>
+		
+      <!-- <div class="boxall" style="height: 300px">
+        <div class="alltitle">标题样式</div>
+		  <div class="navboxall">
+		  <table class="table1" width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+       <th scope="col">排名</th>
+      <th scope="col">公司</th>
+      <th scope="col">数量</th>
+      <th scope="col">增长率</th>
+    </tr>
+    <tr>
+		<td><span>1</span></td>
+      <td>腾讯科技</td>
+      <td>114万<br></td>
+      <td>100%<br></td>
+    </tr>
+    <tr>
+		<td><span>2</span></td>
+      <td>百度公司</td>
+      <td>923823万</td>
+      <td>21%</td>
+    </tr>
+    
+    <tr>
+		<td><span>3</span></td>
+      <td>新浪</td>
+      <td>1240253万</td>
+      <td>12%</td>
+    </tr>
+    <tr>
+		<td><span>4</span></td>
+      <td>网易</td>
+      <td>1.2亿</td>
+      <td>39%</td>
+    </tr>
+	  <tr>
+		  <td><span>5</span></td>
+      <td>雅虎</td>
+      <!-- <td>13423万</td> -->
+      <td>9%</td>
+    </tr>
+    <tr>
+		  <td><span>6</span></td>
+      <td>谷歌</td>
+      <!-- <td>13423万</td> -->
+      <td>9%</td>
+    </tr>
+    <tr>
+		  <td><span>5</span></td>
+      <td>雅虎</td>
+      <!-- <td>13423万</td> -->
+      <td>9%</td>
+    </tr>
+    <tr>
+		  <td><span>5</span></td>
+      <td>雅虎</td>
+      <!-- <td>13423万</td> -->
+      <td>9%</td>
+    </tr> -->
+
+  <!-- </tbody>
+</table> -->
+		  </div>
+		  
+      </div>
+		
+		 <!-- <div class="boxall" style="height:320px">
+        <div class="alltitle">66666</div>
+			 <div class="navboxall" id="echart2"></div>
+      </div> -->
+		
+		
+    </li>
+  </ul>
+
+</div>
+	</div>
+
+	<script>
+
+$(function(){
+	$('.wrap,.adduser').liMarquee({
+		direction: 'up',//身上滚动 
+		runshort: false,//内容不足时不滚动
+		scrollamount: 20//速度
+	});
+});
+
+</script> 
+	
+</body>
+</html>

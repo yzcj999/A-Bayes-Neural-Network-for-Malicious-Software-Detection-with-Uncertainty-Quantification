@@ -1,0 +1,5 @@
+1、exe_to_png.py文件从二进制可执行文件中提取字节值并它们存储到列表中，并将PE文件处理成灰度图像的脚本
+2、peDataDumpPreprocess.py文件从PE获取Dataframe和获得基于LightGBM的恶意软件预测模型的预测结果
+3、preprocessPNG.py文件获得恶意软件分类模型的分类结果
+4、dataset_malwares.csv是恶意软件预测模型的训练数据集
+5、dataset_test.csv是恶意软件预测模型的测试数据集

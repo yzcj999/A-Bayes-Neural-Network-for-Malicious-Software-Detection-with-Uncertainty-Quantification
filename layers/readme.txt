@@ -1,0 +1,2 @@
+BBB_LRT里存放的是所定义的贝叶斯卷积层BBBConv和贝叶斯全连接层BBBLinear
+misc.py是nn.Module 的包装器，支持任意flags和通用前向传递

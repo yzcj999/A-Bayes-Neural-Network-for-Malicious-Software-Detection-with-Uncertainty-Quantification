@@ -1,0 +1,426 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Home</title>
+		<meta charset="utf-8">
+		<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+		<!-- 引入 ECharts 文件 -->
+		<script src="js/echarts.js"></script>
+		 <!-- Custom Theme files -->
+		<link href="css/style.css" rel='stylesheet' type='text/css' />
+   		 <!-- Custom Theme files -->
+   		  <!---- start-smoth-scrolling---->
+
+			 <script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1500);
+				});
+			});
+		</script>
+		 <!---- start-smoth-scrolling---->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		</script>
+		<!----start-top-nav-script---->
+		<script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					menuHeight	= menu.height();
+				$(pull).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function(){
+	        		var w = $(window).width();
+	        		if(w > 320 && menu.is(':hidden')) {
+	        			menu.removeAttr('style');
+	        		}
+	    		});
+			});
+		</script>
+		<!----//End-top-nav-script---->
+
+	</head>
+	<body>
+		<div id="top" class="bg">
+		<!----- start-header---->
+			<div id="home" class="header">
+					<div class="top-header">
+						<div class="container">
+						<div class="logo">
+							<a href="#"><img src="images/logo.png" title="Dasiy" /></a>
+						</div>
+						<!----start-top-nav---->
+						 <nav class="top-nav">
+							<ul class="top-nav">
+								<li><a href="#service" class="scroll">服务</a></li>
+								<li><a href="#advantage" class="scroll">优势</a></li>
+								<li><a href="#introduction" class="scroll">详情介绍</a></li>
+								<li><a href="#team" class="scroll">团队</a></li>
+								<li><a href="./datepanel/index.html">数据面板</a></li>
+								<li><a href="./sciencepopularization/恶意软件科普.html">恶意软件科普</a></li>
+
+							</ul>
+							<a href="#" id="pull"><img src="images/nav-icon.png" title="menu" /></a>
+						</nav>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+			</div>
+			<!----- //End-header---->
+			<!---- header-info ---->
+			<div class="header-info text-center">
+				<div class="container">
+					<h1><span> </span>真实场景<label>恶意软件自动</label>检测平台<span> </span></h1>
+					<p>基于Bayes残差神经网络</p>
+					<a class="big-btn" href="http://127.0.0.1:8000" >Let's  Go</a>
+					<!-- <button style="position:relative;" class="big-btn" id="btn" name="btn">
+						现在开始
+						<input id="upfile" style="opacity:0;width:100%;height:100%;position:absolute;top:0;left:0" type="file" name="upfile" οnchange="fileUpload();"/>
+						</button> -->
+					<a class="down-arrow down-arrow-to scroll" href="#service"><span> </span></a>
+					<label class="mouse-divice"> </label>
+				</div>
+			</div>
+			</div>
+			<div class="clearfix"> </div>
+			<!---- header-info ---->
+			<!--- service-us ---->
+			<div id="service" class="service">
+				<div class="container">
+					<div class="service-head text-center">
+						<h3>提供的<span>服务</span></h3>
+						<p>检测恶意程序，守卫用户安全</p>
+					</div>
+					<!--- service-grids ---->
+					<div class="service-grids">
+						<div class="col-md-3">
+							<div class="service-grid text-center">
+								<span class="service-icon1"> </span>
+								<h3>文件检测<br /><label> </label></h3>
+								<p>用户上传文件，经由恶意程序系统自动检测识别，并返回检测结果到用户界面</p>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="service-grid text-center">
+								<span class="service-icon2"> </span>
+								<h3>数据面板<br /><label> </label></h3>
+								<p>数据面板展示了此系统的相关数据分析、关于恶意程序的相关数据统计以及基于灰度图像的25类恶意程序相关信息</p>
+							</div>
+						</div>
+						<!-- <div class="col-md-3">
+							<div class="service-grid text-center">
+								<span class="service-icon3"> </span>
+								<h3>图谱展示<br /><label> </label></h3>
+								<p>知识图谱展示了25种最常见的恶意程序之间的联系，通过关系图的方式向用户清楚直观地展示恶意程序家族</p>
+							</div>
+						</div> -->
+						<div class="col-md-3">
+							<div class="service-grid text-center">
+								<span class="service-icon4"> </span>
+								<h3>知识科普<br /><label> </label></h3>
+								<p>通过展示一些关于恶意程序的基础知识，希望用户提高对恶意程序的认知水平、提高防范意识</p>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<!--- service-grids ---->
+				</div>
+				<a class="service-down-icon down-arrow-to scroll" href="#advantage"><span> </span></a>
+			</div>
+			<!--- service-us ---->
+			<!---advantage-->
+			<div id="advantage" class="advantage">
+				<div class="container">
+					<div class="advantage-head text-center">
+						<h3>我们的<span>优势</span></h3>
+						<p>选择更好的我们</p>
+					</div>
+					<!--- advantage-grids ---->
+					<div class="advantage-grids">
+						<div class="col-md-0">
+							<div class="advantage-grid text-center">
+								<span class="advantage-icon1"> </span>
+								<h3>更快速<br /><label> </label></h3>
+								<p></p>
+							</div>
+						</div>
+						<div class="col-md-0">
+							<div class="advantage-grid text-center">
+								<span class="advantage-icon2"> </span>
+								<h3>更准确<br /><label> </label></h3>
+								<p></p>
+							</div>
+						</div>
+						<div class="col-md-0">
+							<div class="advantage-grid text-center">
+								<span class="advantage-icon3"> </span>
+								<h3>更方便<br /><label> </label></h3>
+								<p></p>
+							</div>
+						</div>
+						<div class="col-md-0">
+							<div class="advantage-grid text-center">
+								<span class="advantage-icon4"> </span>
+								<h3>更科学<br /><label> </label></h3>
+								<p></p>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<!--- advantage-grids ---->
+				</div>
+				<a class="advantage-down-icon down-arrow-to scroll" href="#introduction"><span> </span></a>
+			</div>
+
+			<!---//advantage-->
+			<!--- introduction --->
+			<div id="introduction" class="introduction">
+				<div class="container">
+					<div class="service-head text-center">
+						<h3>总体<span>详情介绍</span></h3>
+						<p>Part①  功能概述</p>
+					</div>
+					<div class="introduction-grid text-center">
+						<img src="images/process.png" title="introduction" />
+						<a class="p-down-arrow down-arrow-to scroll" href="#advertising"><span> </span></a>
+					</div>
+				</div>
+				<!--- Advertising --->
+			<div id="advertising" class="advertising">
+				<div class="container">
+					<div class="advertising-grids">
+						<div class="col-md-6 advertising-left">
+							<img src="images/ad-img.png" title="advertising" />
+						</div>
+						<div class="col-md-6 advertising-right text-right">
+							<h4>安全威胁<label> </label></h4>
+							<p>互联网发展到今天，安全已经成为基本诉求。安全是一个很大的话题，最基本的就是对威胁的识别和检测，这是区分敌我的第一步，也是一切安全策略的前提。恶意代码检测，这是一个历史悠久的问题，攻防双方都演进了几十年，这场战争还在继续，未来也不会终止。研究恶意软件检测技术，不仅仅是学术界的一个研究方向，也是维护网络世界安全的重要责任。</p>
+							<a class="wedobtn" href="#">Part② 背景</a>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<a class="ad-down-arrow down-arrow-to scroll" href="#advertising0"><span> </span></a>
+				</div>
+			</div>
+			<!---//Advertising --->
+			<!--- Advertising0 --->
+			<div id="advertising0" class="advertising0">
+				<div class="container">
+					<div class="advertising0-grids">
+						<div class="col-md-6 advertising-left">
+							<h5>（ 2016-2022年 五类恶意程序数量增长情况 ）</h5>
+							<div id="main" style="width: 500px;height:300px;"></div>
+							<script type="text/javascript">
+								var chartDom = document.getElementById('main');
+								var myChart = echarts.init(chartDom);
+								var option;
+
+								option = {
+								title: {
+									text: '',
+									left:'0%'
+								},
+								tooltip: {
+									trigger: 'axis'
+								},
+								legend: {
+									data: ['Adialer.C', 'Agent.FYI', 'Allaple.A', 'Allaple.L', 'Alueron.gen!J']
+								},
+								grid: {
+									left: '2%',
+									right: '4%',
+									bottom: '1%',
+									containLabel: true
+								},
+								toolbox: {
+									feature: {
+									saveAsImage: {}
+									}
+								},
+								xAxis: {
+									type: 'category',
+									boundaryGap: false,
+									data: ['2016', '2017', '2018', '2019', '2020', '2021', '2022']
+								},
+								yAxis: {
+									type: 'value'
+								},
+								series: [
+									{
+									name: 'Adialer.C',
+									type: 'line',
+									stack: 'Total',
+									data: [120, 132, 101, 134, 90, 230, 210]
+									},
+									{
+									name: 'Agent.FYI',
+									type: 'line',
+									stack: 'Total',
+									data: [220, 182, 191, 234, 290, 330, 310]
+									},
+									{
+									name: 'Allaple.A',
+									type: 'line',
+									stack: 'Total',
+									data: [150, 232, 201, 154, 190, 330, 410]
+									},
+									{
+									name: 'Allaple.L',
+									type: 'line',
+									stack: 'Total',
+									data: [320, 332, 301, 334, 390, 330, 320]
+									},
+									{
+									name: 'Alueron.gen!J',
+									type: 'line',
+									stack: 'Total',
+									data: [820, 932, 901, 934, 1290, 1330, 1320]
+									}
+								]
+								};
+
+								option && myChart.setOption(option);
+							</script>
+							
+						</div>
+						<div class="col-md-6 advertising0-right text-right">
+							<h4>恶意程序分类<label> </label></h4>
+							<p>本平台提供对最常见的25种恶意程序类别进行检测分类，包括：Adialer.C、Agent.FYI、Allaple.A、Allaple.L、Alueron.gen!J、Autorun.K、C2LOP.gen!g、C2LOP.P、Dialplatform.B、Dontovo.A、Fakerean、Instantaccess、Lolyda.AA1、Lolyda.AA2、Lolyda.AA3、Lolyda.AT、Malex.gen!J、Obfuscator.AD、Rbot!gen、Skintrim.N、Swizzor.gen!E、Swizzor.gen!I、VB.AT、Wintrim.BX、Yuner.A</p>
+							<a class="wedobtn" href="#">Part② 背景</a>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<a class="ad-down-arrow down-arrow-to scroll" href="#marketing"><span> </span></a>
+				</div>
+			</div>
+			<!---//Advertising --->
+			<!--- marketing ---->
+			<div id="marketing" class="marketing">
+				<div class="container">
+					<div class="marketing-grids">
+						<div class="col-md-6 marketing-left text-left">
+							<h4><label> </label>所用算法</h4>
+							<p>我们使用LightGBM算法预测PE文件是否为恶意软件。LightGBM能够快速分类、精度高对识别恶意软件性能更好。其次，通过在ResNet50神经网络里引入贝叶斯方法，一方面通过把分类的权重替换为概率分布的参数给出不确定性估计，另一方面利用先验分布对参数进行积分，在训练过程中计算多个模型的平均，使网络具有正则化效果，防止过拟合。 </p>
+							<a class="wedobtn" href="#">Part③ 我们的工作</a>
+						</div>
+						<div class="col-md-6 marketing-right">
+							<img src="images/margating-pic.png" title="marketing" />
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<a class="mr-down-arrow down-arrow-to scroll" href="#advertising1"><span> </span></a>
+				</div>
+			</div>
+			<!--- //marketing ---->
+			<!--- Advertising1 --->
+			<div id="advertising1" class="advertising1">
+				<div class="container">
+					<div class="advertising1-grids">
+						<div class="col-md-6 advertising1-left">
+							<img src="images/ad-img1.png" title="advertising1" />
+						</div>
+						<div class="col-md-6 advertising1-right text-right">
+							<h4>设计流程详解<label> </label></h4>
+							<p>我们的检测系统可以分成两层模型，分别是识别模型和分类预测模型。</p><p>
+								第一层是基于lightGBM的恶意程序识别模型，对用户上传的文件进行是否为恶意程序的判别，如果不是恶意程序，将在前端页面直接显示结果；如果是恶意程序，则将用户传入的PE文件转化为灰度图像，再传入第二层贝叶斯残差深度学习模型进行分类预测，最终在前端页面返回一系列预测结果。</p>
+							<a class="wedobtn" href="#">Part③ 我们的工作</a>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<a class="ad-down-arrow down-arrow-to scroll" href="#marketing1"><span> </span></a>
+				</div>
+			</div>
+			<!---//Advertising1 --->
+			<!--- marketing1 ---->
+			<!--- //marketing1 ---->
+
+
+			</div>
+			<!---//introduction --->
+			<!--- team --->
+			<div id="team" class="team">
+				<div class="container">
+					<div class="team-head text-center">
+						<h4>团队<span>成员</span> </h4>
+					</div>
+					<!--- team-members --->
+					<div class="team-members text-center">
+						<div class="col-md-4">
+							<div class="team-member">
+								<img src="images/t1.png" title="name" />
+								<h5><span>魏 </span>高达</h5>
+								<label>connect</label>
+								<ul class="unstyled-list">
+									<li><a class="twitter" href="#"><span> </span></a></li>
+									<li><a class="facebook" href="#"><span> </span></a></li>
+									<li><a class="linked" href="#"><span> </span></a></li>
+									<div class="clearfix"> </div>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="team-member">
+								<img src="images/t2.png" title="name" />
+								<h5><span>田</span>萌萌</h5>
+								<label>connect</label>
+								<ul class="unstyled-list">
+									<li><a class="twitter" href="#"><span> </span></a></li>
+									<li><a class="facebook" href="#"><span> </span></a></li>
+									<li><a class="linked" href="#"><span> </span></a></li>
+									<div class="clearfix"> </div>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="team-member">
+								<img src="images/t3.png" title="name" />
+								<h5><span>白</span>星雨</h5>
+								<label>connect</label>
+								<ul class="unstyled-list">
+									<li><a class="twitter" href="#"><span> </span></a></li>
+									<li><a class="facebook" href="#"><span> </span></a></li>
+									<li><a class="linked" href="#"><span> </span></a></li>
+									<div class="clearfix"> </div>
+								</ul>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<!--- team-members --->
+				</div>
+			</div>
+			<!--- team --->
+			<div class="clearfix"> </div>
+			<!---- footer ---->
+			<div class="footer text-center">
+				<a href="#"><img src="images/footer-logo.png" title="daisy" /></a>
+				<p class="copy-right">基于Bayes残差神经网络的真实场景恶意软件自动检测平台@<a href="#team" class="scroll">WTB团队设计</a></p>
+				<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										target="_blank" 
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutCubic' });
+										
+									});
+								</script>
+				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+			</div>
+			<!---- footer ---->
+
+</body>
+</html>
